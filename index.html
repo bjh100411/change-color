@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>next page</title>
+</head>
+<body>
+<h1 id="hello_word">hello word</h1>
+<style>
+    h1:nth-child(1) {
+        color: black;
+    }
+</style>
+<input id="left" type="button" value="&lt" onclick="
+    if(document.querySelector('#hello_word').style.color === 'blue') {
+        document.querySelector('#hello_word').style.color = 'black';
+    }
+    else {
+        document.querySelector('#hello_word').style.color = 'red';
+    }">
+<input id="right" type="button" value="&gt" onclick="
+    if(document.querySelector('#hello_word').style.color === 'red') {
+        document.querySelector('#hello_word').style.color = 'black';
+    }
+    else {
+        document.querySelector('#hello_word').style.color = 'blue';
+    }">
+</body>
+</html>
